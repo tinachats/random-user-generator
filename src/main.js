@@ -20,7 +20,7 @@ const app = Vue.createApp({
         birthdayDate(date) {
             let dt = new Date(date);
             return (
-                `${this.pad(dt.getDate())}/${this.pad(dt.getMonth())}/${dt.getFullYear()}`
+                `${this.pad(dt.getDate())}/${this.pad(dt.getMonth() + 1)}/${dt.getFullYear()}`
             );
         },
         getUser() {
@@ -40,8 +40,11 @@ const app = Vue.createApp({
                     this.phone = data.results[0].phone;
                     this.picture = data.results[0].picture.large;
                 })
+        },
+        animate() {
+            alert('Hi');
         }
     }
-})
+});
 
 app.mount('#app');

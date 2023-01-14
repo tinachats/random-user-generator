@@ -30,7 +30,13 @@ body {
     margin: 0 auto;
 }
 
+.tab-content,
+.tab-content .tab-pane {
+    width: 765px;
+}
+
 .nav-tabs,
+.nav-tabs .nav-item,
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:hover {
     border-radius: 0;
