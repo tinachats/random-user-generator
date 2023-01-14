@@ -1,0 +1,112 @@
+:root {
+    --app-color: #83ba43;
+    --text-faded: #6c757d;
+    --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#app {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+#app>main {
+    margin: 0 auto;
+}
+
+.nav-tabs,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+    border-radius: 0;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.nav-tabs .nav-link {
+    --bs-text-opacity: 1;
+    color: var(--text-faded)!important;
+    padding: .05rem 1rem;
+}
+
+.nav-tabs .nav-link.active {
+    position: relative;
+    color: var(--app-color) !important;
+    border-color: var(--app-color) !important;
+    background-color: transparent !important;
+    border-top: 2px solid var(--app-color);
+}
+
+.nav-tabs .nav-link.active:before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid var(--app-color);
+}
+
+.nav-link>i {
+    font-size: 2rem;
+}
+
+figure.img-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 150px;
+    width: 100%;
+}
+
+figure.img-box>img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    border: 3px solid var(--text-faded);
+    border-radius: 50%;
+    background-color: var(--bs-light);
+    box-shadow: var(--shadow-lg);
+    padding: 5px;
+}
+
+figure.img-box>img.male {
+    border: 3px solid var(--bs-primary);
+}
+
+figure.img-box>img.female {
+    border: 3px solid palevioletred;
+}
+
+.bg-success {
+    background-color: var(--app-color) !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 1.5rem;
+}
+
+.info-card {
+    border-radius: 3rem !important;
+}
